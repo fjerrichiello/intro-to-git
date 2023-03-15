@@ -28,7 +28,9 @@ const Home: NextPage = ({}: InferGetServerSidePropsType<
 
 export default Home;
 
-export const getServerSideProps: GetServerSideProps = async (context) => {return {
+export const getServerSideProps: GetServerSideProps = async (context) => {
+  await new Promise((resolve) => setTimeout(resolve, 1000));
+  return {
 		props: {},
 	};
 };
